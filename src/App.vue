@@ -1,11 +1,19 @@
 <template>
-  <div id="app">notes</div>
+  <div id="app">
+      <sidebar></sidebar>
+      <pad></pad>
+  </div>
 </template>
 
 <script>
+import Pad from './components/Pad'
+import Sidebar from './components/Sidebar'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+      Pad, Sidebar
+  }
 }
 </script>
 
