@@ -1,5 +1,6 @@
 export default {
     note: {
+        id: null,
         title: null,
         body: null,
         lastSaved: null
