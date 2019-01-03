@@ -21,7 +21,7 @@
         background-color: #f9f9f9;
         flex: 1;
         height: 100%;
-        max-width: 28%;
+        min-width: 28%;
         border-right: 2px solid #eee;
         overflow-y: scroll;
 

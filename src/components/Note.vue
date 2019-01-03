@@ -74,6 +74,7 @@
             background: #cc4466;
             min-height: 100%;
             color: #fff;
+            transition: margin-left 100ms ease-in-out;
         }
 
         &__delete-icon {
