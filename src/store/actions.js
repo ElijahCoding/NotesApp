@@ -16,8 +16,17 @@ export const storeNotes = ({ state }) => {
     localStorage.setItem('notes', JSON.stringify(state.notes))
 }
 
-export const openNote = ({ commit }, note) => {
+export const openNote = ({ commit, dispatch, state }, note) => {
     commit(mutations.SET_CURRENT_NOTE, note)
+}
+
+export const deleteNote = ({ commit, dispatch }, id) => {
+    if (id === state.note.id) {
+        dispatch('clearCurrentNote')
+    }
+    commit(mutations.DELETE_NOTE, id)
+
+    dispatch('storeNotes')
 }
 
 export const startSaveTimeout = ({ commit, dispatch, state }) => {
@@ -40,6 +49,6 @@ export const stopSaveTimeout = ({ commit, dispatch, state }) => {
 
 export const clearCurrentNote = ({ commit, dispatch }) => {
     dispatch('stopSaveTimeout')
-    
+
     commit(mutations.SET_CURRENT_NOTE, null)
 }
