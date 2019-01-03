@@ -12,10 +12,18 @@ export const saveNote = ({ commit, dispatch, state }) => {
 
 export const startSaveTimeout = ({ commit, dispatch, state }) => {
     if (state.saveTimeout !== null) {
-
+        return
     }
+
+    commit(mutations.SET_SAVE_TIMEOUT, {
+        callback () {
+            dispatch('saveNote')
+            dispatch('stopSaveTimeout')
+        },
+        delay: 3000
+    })
 }
 
 export const stopSaveTimeout = ({ commit, dispatch, state }) => {
-
+    commit(mutations.CLEAR_SAVE_TIMEOUT)
 }

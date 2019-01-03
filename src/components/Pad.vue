@@ -27,7 +27,8 @@
     export default {
         methods: {
             ...mapActions([
-                'saveNote'
+                'saveNote',
+                'startSaveTimeout'
             ]),
 
             save () {
@@ -35,6 +36,8 @@
                     this.saveNote()
                     return
                 }
+
+                this.startSaveTimeout()
             }
         },
 

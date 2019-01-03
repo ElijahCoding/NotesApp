@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export const note = (state) => {
     return state.note
 }
@@ -12,5 +14,5 @@ export const lastSaved = state => {
     if (!state.note.lastSaved) {
         return 'Never'
     }
-    return state.note.lastSaved
+    return moment(state.note.lastSaved).calendar()
 }
