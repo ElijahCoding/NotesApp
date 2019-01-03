@@ -60,7 +60,7 @@
         flex-direction: column;
 
         &__title {
-            width: 100%;
+            max-width: 100%;
             border: 0;
             font: inherit;
             font-size: 1.6em;

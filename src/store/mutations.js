@@ -16,5 +16,8 @@ export default {
     },
     [types.CLEAR_SAVE_TIMEOUT] (state) {
         state.saveTimeout = null
+    },
+    [types.SET_CURRENT_NOTE] (state, note) {
+        state.note = note
     }
 }
