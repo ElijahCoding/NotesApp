@@ -14,7 +14,7 @@
 
         <footer class="pad__footer">
             <ul class="pad__footer-items">
-                <li class="pad__footer-item">Words: x</li>
+                <li class="pad__footer-item">Words: {{ wordCount }}</li>
                 <li class="pad__footer-item pad__footer-item--right">Last saved: {{ lastSaved }}</li>
             </ul>
         </footer>
@@ -44,7 +44,8 @@
         computed: {
             ...mapGetters([
                 'note',
-                'lastSaved'
+                'lastSaved',
+                'wordCount'
             ])
         }
     }
