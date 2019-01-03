@@ -5,9 +5,13 @@
         </a>
         <div class="note__content">
             <a href="#" class="note__title">
-                {{ note.title }}
+                <span v-if="note.title">{{ note.title }}</span>
+                <span v-else>Untitled note</span>
             </a>
-            <p class="note__body">{{ note.body }}</p>
+            <p class="note__body">
+                <span v-if="note.body">{{ note.body }}</span>
+                <span v-else><em>Empty</em></span>
+            </p>
         </div>
     </div>
 </template>

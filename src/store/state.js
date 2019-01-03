@@ -5,6 +5,6 @@ export default {
         body: null,
         lastSaved: null
     },
-
-    notes: []
+    notes: [],
+    saveTimeout: null
 }

@@ -15,7 +15,7 @@
         <footer class="pad__footer">
             <ul class="pad__footer-items">
                 <li class="pad__footer-item">Words: x</li>
-                <li class="pad__footer-item pad__footer-item--right">Last saved: xx/xx</li>
+                <li class="pad__footer-item pad__footer-item--right">Last saved: {{ lastSaved }}</li>
             </ul>
         </footer>
     </div>
@@ -31,13 +31,17 @@
             ]),
 
             save () {
-                this.saveNote()
+                if (!this.note.id) {
+                    this.saveNote()
+                    return
+                }
             }
         },
 
         computed: {
             ...mapGetters([
-                'note'
+                'note',
+                'lastSaved'
             ])
         }
     }
