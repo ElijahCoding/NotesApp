@@ -1,21 +1,9 @@
 export default {
     note: {
-        title: 'Abc',
-        body: 'A body'
+        title: null,
+        body: null,
+        lastSaved: null
     },
 
-    notes: [
-        {
-            title: 'One',
-            body: 'Body one'
-        },
-        {
-            title: 'Two',
-            body: 'Body two'
-        },
-        {
-            title: 'Three',
-            body: 'Body three'
-        }
-    ]
+    notes: []
 }

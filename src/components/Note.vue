@@ -5,16 +5,16 @@
         </a>
         <div class="note__content">
             <a href="#" class="note__title">
-                One note
+                {{ note.title }}
             </a>
-            <p class="note__body">bla blabla</p>
+            <p class="note__body">{{ note.body }}</p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-
+        props: ['note']
     }
 </script>
 
